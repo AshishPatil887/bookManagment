@@ -1,0 +1,67 @@
+
+<div class="container">
+	<div class="row">
+		
+        <button class="pull-right btn btn-success" (click)="goto()">Add books </button>   
+        <div class="col-md-12">
+        <h4 style="text-align: center; font-weight:bold;">books list</h4>
+        <div class="table-responsive">
+
+                
+              <table  class="table table-bordred table-striped">
+                   
+                <thead>
+                    <th>No.</th>
+                    <th>Book title</th>
+                    <th>Book Auther Name</th>
+                    <th>Book Type</th>
+                    <th>book Prize</th>
+                    <th>Description</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </thead>
+    <tbody>
+    
+    <tr *ngFor="let book of bookData; let i=index;">
+    <td>{{i}}</td>
+    <td>{{book.bookName}}</td>
+    <td>{{book.bookAuther}}</td>
+    <td>{{book.bookType}}</td>
+    <td>{{book.bookPrice}}</td>
+    <td>{{book.bookDesc}}</td>
+    <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button (click)="edit(book._id)" class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button (click)="delete(book._id)" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+    </tr>
+    
+
+    
+    
+ 
+    
+    
+    
+
+    
+    
+
+    
+   
+    
+   
+    
+    </tbody>
+        
+</table>
+
+<div class="clearfix"></div>
+
+                
+            </div>
+            
+        </div>
+	</div>
+</div>
+
+    
+    
+
